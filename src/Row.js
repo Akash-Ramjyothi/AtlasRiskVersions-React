@@ -3,8 +3,9 @@ const Row = ({ region, environment }) => {
     <tr>
       <td class="region">{region}</td>
       <td class="environment">
-        <div>STG</div>
-        <div>UAT</div>
+        {environment.map((e, ind) => {
+          return <div key={ind}>{e.name}</div>;
+        })}
       </td>
       <td class="modules">
         <div id="accordion">
@@ -144,16 +145,15 @@ const Row = ({ region, environment }) => {
         </div>
       </td>
       <td class="version">
-        <div>
-          <div>{environment.STG.Server}</div>
-          <div>{environment.STG.Coherence}</div>
-          <div>{environment.STG.UI}</div>
-        </div>
-        <div>
-          <div>{environment.UAT.Server}</div>
-          <div>{environment.UAT.Coherence}</div>
-          <div>{environment.UAT.UI}</div>
-        </div>
+        {environment.map((e, ind) => {
+          return (
+            <div key={ind}>
+              <div>{e.data.Server}</div>
+              <div>{e.data.Coherence}</div>
+              <div>{e.data.UI}</div>
+            </div>
+          );
+        })}
       </td>
     </tr>
   );

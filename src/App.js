@@ -7,7 +7,7 @@ function App() {
   const [atlasData, setAtlasData] = useState([]);
 
   useEffect(() => {
-    fetch("https://run.mocky.io/v3/da1ff640-dde1-4a17-b101-f614455491e7").then(
+    fetch("https://run.mocky.io/v3/f6bc5931-fd7e-431a-bc03-b41ec7058b0f").then(
       (response) => {
         response.json().then((data) => {
           console.log(data);
@@ -32,8 +32,8 @@ function App() {
           </thead>
           <tbody>
             {/* <!--First Row--> */}
-            {atlasData.length > 0 && atlasData.map((d) => {
-              return <Row region={d.region} environment={d.environment} />;
+            {atlasData.length > 0 && atlasData.map((d, ind) => {
+              return <Row key={ind} region={d.region} environment={d.environment} />;
             })}
           </tbody>
         </table>
