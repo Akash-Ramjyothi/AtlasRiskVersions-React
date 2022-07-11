@@ -7,7 +7,7 @@ function App() {
   const [atlasData, setAtlasData] = useState([]);
 
   useEffect(() => {
-    fetch("https://run.mocky.io/v3/f6bc5931-fd7e-431a-bc03-b41ec7058b0f").then(
+    fetch("http://localhost:8080/atlasriskversions").then(
       (response) => {
         response.json().then((data) => {
           console.log(data);
@@ -19,6 +19,18 @@ function App() {
 
   return (
     <div className="App">
+
+    {/* {<!--Top NavBar-->} */}
+    <div class="topnav">
+      <img src="https://www.retailbankerinternational.com/wp-content/uploads/sites/2/2020/07/Barclays-logo.jpg" alt="Italian Trulli" class="logo"/>
+    </div>
+
+    {/* {<!--Title-->} */}
+    <label class="title"> Atlas Risk Versions </label>
+
+    {/* {<!--Divider-->} */}
+    <hr class="solid" />
+
       {/* <!--Table--> */}
       <div className="tablecontainer">
         <table class="atlastable" border="1" cellspacing="0">
