@@ -7,7 +7,7 @@ function App() {
   const [atlasData, setAtlasData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/atlasriskversions").then((response) => {
+    fetch("https://run.mocky.io/v3/a028cd78-a3d1-420d-9cdc-420635506555").then((response) => {
       response.json().then((data) => {
         console.log(data);
         setAtlasData(data);
@@ -52,6 +52,7 @@ function App() {
                     key={ind}
                     region={d.region}
                     environment={d.environment}
+                    ind={ind}
                   />
                 );
               })}
