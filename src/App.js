@@ -19,11 +19,6 @@ function App() {
     <div className="App">
       {/* {<!--Top NavBar-->} */}
       <div class="topnav">
-        <img
-          src="https://www.retailbankerinternational.com/wp-content/uploads/sites/2/2020/07/Barclays-logo.jpg"
-          alt="Italian Trulli"
-          class="logo"
-        />
       </div>
 
       {/* {<!--Title-->} */}
